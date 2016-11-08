@@ -17,8 +17,9 @@ var calculateCalories = function(info, tab) {
         }
         // End
 
+
         chrome.tabs.create({
-            url: 'https://www.nutritionix.com/natural-demo?q=' + selectionText.split('\n').join('%0D%0A') + '&s=' + servingSize,
+            url: 'https://www.nutritionix.com/natural-demo?q=' + selectionText.split('\n').join('%0D%0A') + '&lineDelimited=true' + '&s=' + servingSize,
         });
     });
 };
